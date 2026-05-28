@@ -61,7 +61,7 @@ El análisis de las lecturas de secuenciación Illumina mostró un desempeño ge
   - Cobertura estimada
 - Nota: k debe ser impar; valores muy pequeños o muy grandes afectan la sensibilidad y continuidad del ensamblado.
 
-### 2. Ensamblado con SPAdes
+### 2. Ensamblado 
 ```bash
 spades.py --careful -1 sample_R1.fastq.gz -2 sample_R2.fastq.gz -k 21,33,55,77,99,127 -o spades
 
@@ -107,7 +107,4 @@ VFAT -VHFILE vh_salida.txt -TARGETLIST list.txt -OUTFILE dist_salida -LEFTEXT 4 
 Para validar la identidad del ensamblado, se realizó un análisis filogenómico utilizando VAMPhyRE, integrando 14 genomas de referencia de E. amylovora y un grupo externo, Agrobacterium tumefaciens. La reconstrucción del árbol filogenético mediante el método Neighbor-Joining en MEGA, posteriormente editado en iTOL, situó el ensamblado de SPAdes dentro del clúster de E. amylovora, mientras que A. tumefaciens quedó claramente separado como grupo externo . Este resultado confirmó que el genoma analizado pertenece a la especie de interés y que las lecturas y el ensamblado reflejan la composición genómica correcta del patógeno, respaldando tanto la calidad de la secuenciación como la confiabilidad del flujo de trabajo bioinformático utilizado.
 
 
-
-
-   - Cobertura (X) = (Número de lecturas × 2 × longitud promedio de lectura) / tamaño del genoma
    - Nota: Multiplicar por 2 por tratarse de lecturas paired-end. Usar tamaño de genoma del mejor hit de One Codex.
